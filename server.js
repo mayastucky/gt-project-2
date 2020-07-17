@@ -5,6 +5,7 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
+
 /**
  * DEFINE VARIABLES
  */
@@ -46,22 +47,19 @@ res.send("Hello World.");
  * DB Connection
  * APP LISTEN
  */
-// db.sequelize
-//     .sync({ force: true })
-// //   .sync()
-//   .then(() => {
-//     // Start our server so that it can begin listening to client requests.
-//     app.listen(PORT, function () {
-//       // Log (server-side) when our server has started
-//       console.log(`Server listening on: http://localhost:${PORT}`);
-//     });
-//   })
-//   .catch((err) => {
-//     console.log("Error connecting to the database.");
-//     console.log(err);
-//   });
-
-  app.listen(PORT, function () {
-    // Log (server-side) when our server has started
-    console.log(`Server listening on: http://localhost:${PORT}`);
+db.sequelize
+    .sync({ force: true })
+//   .sync()
+  .then(() => {
+    // Start our server so that it can begin listening to client requests.
+    app.listen(PORT, function () {
+      // Log (server-side) when our server has started
+      console.log(`Server listening on: http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Error connecting to the database.");
+    console.log(err);
   });
+
+ 
