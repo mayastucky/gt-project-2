@@ -32,6 +32,10 @@ app.set("view engine", "handlebars");
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
+app.get("/", function(req, res) {
+res.send("Hello World.");
+})
+
 // Routes
 
 // app.use(ViewsController);
@@ -42,17 +46,22 @@ app.use(express.static("public"));
  * DB Connection
  * APP LISTEN
  */
-db.sequelize
-    .sync({ force: true })
-//   .sync()
-  .then(() => {
-    // Start our server so that it can begin listening to client requests.
-    app.listen(PORT, function () {
-      // Log (server-side) when our server has started
-      console.log(`Server listening on: http://localhost:${PORT}`);
-    });
-  })
-  .catch((err) => {
-    console.log("Error connecting to the database.");
-    console.log(err);
+// db.sequelize
+//     .sync({ force: true })
+// //   .sync()
+//   .then(() => {
+//     // Start our server so that it can begin listening to client requests.
+//     app.listen(PORT, function () {
+//       // Log (server-side) when our server has started
+//       console.log(`Server listening on: http://localhost:${PORT}`);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log("Error connecting to the database.");
+//     console.log(err);
+//   });
+
+  app.listen(PORT, function () {
+    // Log (server-side) when our server has started
+    console.log(`Server listening on: http://localhost:${PORT}`);
   });
