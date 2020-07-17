@@ -1,1 +1,3 @@
-DROP if
+DROP DATABASE IF EXISTS maestro;
+
+CREATE DATABASE maestro;

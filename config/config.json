@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "Virtue77$GOD",
-      "database": "test_db",
+      "database": "maestro",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
