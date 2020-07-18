@@ -17,8 +17,8 @@ module.exports = function (app) {
   });
 
   // Get route to render registration page
-  app.get("/registration", function (req, res) {
-    res.render("registration");
+  app.get("/register", function (req, res) {
+    res.render("register");
   });
 
   // Get route to render update page
