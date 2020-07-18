@@ -34,5 +34,14 @@ app.post("/api/register", function(req, res) {
 //Update Route for Updated Member
 
 //Delete Route for Delete Member
-
+app.delete("/api/dashboard/:id", function(req, res) {
+    db.Educator.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbEducator) {
+        res.json(dbEducator);
+      });
+  });
 };
