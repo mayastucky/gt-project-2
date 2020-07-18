@@ -7,3 +7,15 @@ module.exports = function (app) {
   });
 };
 
+// Get route to render educator information
+
+
+
+
+// Get route to render subjects & specialties
+
+
+
+
+// Get route to render update information page
+
