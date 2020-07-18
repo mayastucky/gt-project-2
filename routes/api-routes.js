@@ -56,4 +56,17 @@ app.delete("/api/dashboard/:id", function(req, res) {
         res.json(dbEducator);
       });
   });
+
+//Get route for search page. Need to adjust where clause
+  app.get("/api/search", function(req, res) {
+    db.Educator.findAll({
+        where: {
+          SubjectId: req.body.SubjectId,
+          SpecialityId: req.body.SpecialityId
+        }
+      })
+      .then(function(dbEducator) {
+        res.json(dbEducator);
+      });
+  });
 };
