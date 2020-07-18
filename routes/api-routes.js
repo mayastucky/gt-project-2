@@ -25,6 +25,7 @@ app.post("/api/register", function(req, res) {
       email: req.body.email,
       password: req.body.password,
       bio: req.body.bio,
+      SpecialityId: req.body.SpecialityId
     })
       .then(function(dbEducator) {
         res.json(dbEducator);
@@ -32,7 +33,7 @@ app.post("/api/register", function(req, res) {
   });
 
 //Update Route for Updated Member
-app.put("/api/dashboard", function(req, res) {
+app.put("/api/dashboard/:id", function(req, res) {
     db.Educator.update(req.body,
       {
         where: {
