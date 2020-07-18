@@ -33,10 +33,6 @@ app.set("view engine", "handlebars");
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-app.get("/", function(req, res) {
-res.send("Hello World.");
-})
-
 // Routes
 
 // app.use(ViewsController);
@@ -44,7 +40,7 @@ res.send("Hello World.");
 // app.use(UsersController);
 
 //Uncomment html routes when we have them-->
-// require("./routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
 
 /**
