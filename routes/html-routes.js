@@ -1,7 +1,9 @@
 // We need a app.get to the path /handlebars
-const path = require('path');
 
-// 
-module.exports = function (app){
-    
-}
+// Get route to render the login page
+module.exports = function (app) {
+  app.get("/login", function (req, res) {
+    res.render("login");
+  });
+};
+
