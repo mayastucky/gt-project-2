@@ -1,0 +1,64 @@
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="currentInformation">
+    <h3 class="uk-card-title">Account Information</h3>
+    <ul>
+        <li>First Name: </li>
+        <li>Last Name: </li>
+        <li>Email: </li>
+        <li>Subject: </li>
+        <li>Specialty: </li>
+    </ul>
+</div>
+<button class="uk-button uk-button-default" id="updateButton" type="button">Update Account</button>
+
+
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="updateInformation">
+    <h3 class="uk-card-title">Update Information</h3>
+    <form>
+        <fieldset class="uk-fieldset">
+
+            {{!-- <legend class="uk-legend">Legend</legend> --}}
+
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="THIS.FIRST_NAME">
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="THIS.LAST_NAME">
+            </div>
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="THIS.EMAIL">
+            </div>
+            {{!-- <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="THIS.PASSWORD">
+            </div> --}}
+
+            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                <label><input class="uk-radio" type="radio" name="radio2" value=1>Language Arts</label><br>
+                <label><input class="uk-radio" type="radio" name="radio2" value=2>Math</label><br>
+                <label><input class="uk-radio" type="radio" name="radio2" value=3>Science</label><br>
+                <label><input class="uk-radio" type="radio" name="radio2" value=4>Social Studies</label><br>
+                <label><input class="uk-radio" type="radio" name="radio2" value=5>Other</label>
+            </div>
+
+            <div class="uk-margin">
+                <select class="uk-select">
+                    <option value=1>Reading</option>
+                    <option value=2>Writing</option>
+                    <option value=3>Algebra</option>
+                    <option value=4>Geometry</option>
+                    <option value=5>Elementary Math</option>
+                    <option value=6>Biology</option>
+                    <option value=7>Chemistry</option>
+                    <option value=8>Astronomy</option>
+                    <option value=9>American History</option>
+                    <option value=10>Political Science</option>
+                    <option value=11>Elementary Social Studies</option>
+                    <option value=12>Physical Education</option>
+                    <option value=13>Art</option>
+                    <option value=14>Music</option>
+                    <option value=15>Performing Arts</option>
+                </select>
+            </div>
+            <button class="uk-button uk-button-default" id="saveButton" type="submit">Save</button>
+        </fieldset>
+    </form>
+    <button class="uk-button uk-button-danger" id="deleteButton" type="submit">Delete Account</button>
