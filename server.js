@@ -5,7 +5,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
 
-
 /**
  * DEFINE VARIABLES
  */
@@ -33,9 +32,9 @@ app.set("view engine", "handlebars");
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
 
-app.get("/", function(req, res) {
-res.send("Hello World.");
-})
+app.get("/", function (req, res) {
+  res.render("index");
+});
 
 // Routes
 
@@ -48,7 +47,7 @@ res.send("Hello World.");
  * APP LISTEN
  */
 db.sequelize
-    // .sync({ force: true })
+  // .sync({ force: true })
   .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.
@@ -61,5 +60,3 @@ db.sequelize
     console.log("Error connecting to the database.");
     console.log(err);
   });
-
- 
