@@ -10,3 +10,5 @@ INSERT INTO Subjects (name) VALUES ("Language Arts"), ("Math"), ("Science"), ("S
 -- INSERT INTO Subjects (name, createdAt, updatedAt) VALUES ("Language Arts", now(), now()), ("Math", now(), now()), ("Science", now(), now()), ("Social Studies", now(), now()), ("Other", now(), now());
 
 -- INSERT INTO Specialities (name, SubjectId, createdAt, updatedAt) VALUES ("Reading", 1, now(), now()), ("Writing", 1, now(), now()), ("Algebra", 2, now(), now()), ("Geometry", 2, now(), now()), ("Elementary", 2, now(), now()), ("Biology", 3, now(), now()), ("Chemistry", 3, now(), now()), ("Astronomy", 3, now(), now()),("American History", 4, now(), now()), ("Political Science", 4, now(), now()), ("Elementary", 4, now(), now()), ("Physical Education", 5, now(), now()), ("Art", 5, now(), now()), ("Music",5, now(), now()),("Performing Arts",5, now(), now());
+
+-- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Jamie", "Lanister", "jlan@gmail.com", "password", "Hello, I love teaching history.", now(), now(), 4);
