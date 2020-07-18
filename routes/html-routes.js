@@ -25,4 +25,9 @@ module.exports = function (app) {
   app.get("/update", function (req, res) {
     res.render("update");
   });
+
+  // Get route to render search results
+  app.get("/search", function (req, res) {
+    res.render("search");
+  });
 };
