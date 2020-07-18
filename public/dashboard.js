@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //two views depending on view or update for dashboard
   const dashboardView = $(".dashboard-view");
-  const dashboardView = $(".dashboard-update");
+  const dashboardUpdate = $(".dashboard-update");
 
 //Clicking on update account from first view will give you preloaded form
 
