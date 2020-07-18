@@ -43,6 +43,10 @@ res.send("Hello World.");
 // app.use(APIController);
 // app.use(UsersController);
 
+//Uncomment html routes when we have them-->
+// require("./routes/html-routes.js")(app);
+require("./routes/api-routes.js")(app);
+
 /**
  * DB Connection
  * APP LISTEN
