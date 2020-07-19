@@ -4,6 +4,8 @@ INSERT INTO Specialities (name, SubjectId) VALUES ("Reading", 1), ("Writing", 1)
 
 INSERT INTO Subjects (name) VALUES ("Language Arts"), ("Math"), ("Science"), ("Social Studies"), ("Other");
 
+INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId) VALUES ("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a teacher.", 1);
+
 --How do we do grade level?
 
 --If I need to re-created the DB in workbench-->
