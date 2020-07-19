@@ -7,6 +7,6 @@ $(document).ready(function () {
     loginButton.on("click", function (event){
         event.preventDefault();
         console.log("You clicked me")
-        window.location.replace("/dashboard/1")
+        window.location.replace("/dashboard")
     })
 });
