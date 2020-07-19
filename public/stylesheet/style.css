@@ -29,3 +29,11 @@ h3{
     font-family: 'Delius Unicase', cursive; 
     background-color:orange
 }
+
+#updateInformation{
+  display: none;
+}
+
+#currentInformation{
+  display: block;
+}
