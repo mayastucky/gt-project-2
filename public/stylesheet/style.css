@@ -1,39 +1,43 @@
-#navbar{
-  background-color: orange;
+#navbar {
+  background-color: #f95738;
 }
 
 .uk-navbar-item {
   font-family: "Delius Unicase", cursive;
   color: white;
+  font-weight: bold;
+  font-size: 36px;
 }
 
 #loginButton {
   margin-top: 30px;
   margin-left: 150px;
   font-family: "Delius Unicase", cursive;
-  margin-left: 400px
-    "
+  margin-left: 475px;
+  color: white;
 }
 
-h3{
-    text-align: center; 
-    font-family: 'Delius Unicase';
+h3 {
+  text-align: center;
+  font-family: "Delius Unicase";
 }
 
-#getStartedButton{
-    position: absolute; 
-    top: 50%;left: 50%;  
-    margin-top: 150px; 
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); 
-    font-family: 'Delius Unicase', cursive; 
-    background-color:orange
+#getStartedButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 18px;
+  margin-top: 75px;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  font-family: "Delius Unicase", cursive;
+  background-color: #f95738;
 }
 
-#updateInformation{
+#updateInformation {
   display: none;
 }
 
-#currentInformation{
+#currentInformation {
   display: block;
 }
