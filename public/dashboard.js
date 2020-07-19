@@ -52,7 +52,7 @@ $(document).ready(function () {
     const currentEducator = $(this)
     $.ajax({
       method: "DELETE",
-      url: "/api/dashboard/" + currentEducator.id,
+      url: "/api/educator/delete/" + currentEducator.id,
     })
       .then(function () {
         window.location.replace("/");
