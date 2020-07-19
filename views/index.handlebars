@@ -1,20 +1,12 @@
-<nav class="uk-navbar-container uk-margin" uk-navbar>
+<nav class="uk-navbar-container uk-margin" uk-navbar id="navbar">
     <div class="uk-navbar-center">
-
-        {{!-- <div class="uk-navbar-center-left">
-            <div>
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active"><a href="#">Active</a></li>
-                </ul>
-            </div>
-        </div> --}}
         {{!-- <img src="/public/img/IMG_3188.JPG"> --}}
-        <a class="uk-navbar-item uk-logo" href="#">Maestro</a>
+        <a class="uk-navbar-item uk-logo" href="/">Maestro</a>
         <div class="uk-navbar-center-right">
             <div>
                 <ul class="uk-navbar-nav">
-                    <li><button class="uk-button uk-button-default" id="loginButton">Login</button></li>
-                    <li><button class="uk-button uk-button-default" id="getStartedButton">Get Started</button></li>
+                    <li><button class="uk-button uk-button-default" id="loginButton">Login</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -22,5 +14,35 @@
     </div>
 </nav>
 
+<div class="container">
+    {{!-- <h3
+        style="position: absolute; top: 50%;left: 50%;  padding-top: 400px; transform: translate(-50%, -50%);-ms-transform: translate(-50%, -50%);">
+        Get connected with instructors across the country</h3> --}}
+    <h3>Get Connected with Instructors Across The Country</h3>
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+
+        <ul class="uk-slideshow-items">
+            <li>
+                <img src="https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="" uk-cover>
+            </li>
+            <li>
+                <img src="https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="" uk-cover>
+            </li>
+            <li>
+                <img src="https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                    alt="" uk-cover>
+            </li>
+        </ul>
+        <button class="uk-button uk-button-default" id="getStartedButton">Get
+            Started</button>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
+            uk-slideshow-item="previous"></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
+            uk-slideshow-item="next"></a>
+    </div>
+</div>
 
 {{!-- login button --}}
