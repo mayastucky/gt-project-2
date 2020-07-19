@@ -34,9 +34,9 @@ $(document).ready(function () {
     }
   }
 
-  
+
   //Delete account button, alert, then delete route with :id to
-  deleteBtn.on("click", deleteAccount(id));
+  deleteBtn.on("click", deleteAccount());
 
   function deleteAccount(id) {
     $.ajax({
