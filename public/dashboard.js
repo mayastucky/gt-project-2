@@ -6,6 +6,9 @@ $(document).ready(function () {
   const updateBtn = $("#updateButton");
   const deleteBtn = $("#deleteButton")
 
+  $(document).on("click", deleteBtn, deleteEducator);
+
+
   switchDisplay("currentInformation");
   //Clicking on update account from first view will give you preloaded form
   updateBtn.on("click", function (even) {
@@ -35,13 +38,21 @@ $(document).ready(function () {
   }
 
 
-  //Delete account button, alert, then delete route with :id to
-  deleteBtn.on("click", deleteAccount());
 
+
+//Delete: What Educator to Delete
+  function deleteEducator() {
+    console.log("Delete Clicked");
+    const currentEducator = $(this)
+    deleteAccount(currentEducator.id);
+  }
+
+//Delete: Actual Delete function
   function deleteAccount(id) {
+    const currentEducator = $(this)
     $.ajax({
       method: "DELETE",
-      url: "/api/dashboard/" + id,
+      url: "/api/dashboard/" + currentEducator.id,
     })
       .then(function () {
         window.location.replace("/");
@@ -56,3 +67,20 @@ $(document).ready(function () {
 
 
 });
+
+
+
+
+
+
+
+  // This function does an API call to delete posts
+  function deletePost(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/posts/" + id
+    })
+      .then(function() {
+        getPosts(postCategorySelect.val());
+      });
+  }
