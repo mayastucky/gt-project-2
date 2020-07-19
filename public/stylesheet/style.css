@@ -34,6 +34,11 @@ h3 {
   background-color: #f95738;
 }
 
+#loginBox {
+  justify-content: center;
+  margin-left: 45%;
+}
+
 #updateInformation {
   display: none;
 }

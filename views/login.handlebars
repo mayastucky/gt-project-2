@@ -7,7 +7,7 @@
 </nav>
 
 <p style="justify-content: center; margin-left:47%; font-family: 'Delius Unicase', cursive;">Instructor Login</p>
-<form style="justify-content: center; margin-left:45%;">
+<form id="loginBox">
     <div class="uk-margin">
         <div class="uk-inline">
             <span class="uk-form-icon" uk-icon="icon: user"></span>
@@ -18,10 +18,11 @@
     <div class="uk-margin">
         <div class="uk-inline">
             <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-            <input class="uk-input" type="text">
+            <input class="uk-input" type="password">
         </div>
     </div>
-    <button class="uk-button uk-button-default" id="loginButton2" type="submit" value=1>Go!</button><br>
+    <button class="uk-button uk-button-default" style="margin-left: 5px;" id="loginButton2" type="submit"
+        value=1>Go!</button><br>
     <label>Don't Have An Account?</label><br>
-    <a href="/register">Register Here</a>
+    <a href="/register" style="margin-left:10px;">Register Here</a>
 </form>
