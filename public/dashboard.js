@@ -6,7 +6,7 @@ $(document).ready(function () {
   const updateBtn = $("#updateButton");
   const deleteBtn = $("#deleteButton")
 
-  $(document).on("click", deleteBtn, deleteEducator);
+  $(deleteBtn).on("click", deleteEducator);
 
 
   switchDisplay("currentInformation");
