@@ -1,23 +1,21 @@
 const db = require("../models");
 
-module.exports = function(app) {
-
-//Get route to display member info
-//ID needs to come from the login click 
-//dashboard or login for path?
-app.get("/api/dashboard/:id", function(req, res) {
+module.exports = function (app) {
+  //Get route to display member info
+  //ID needs to come from the login click
+  //dashboard or login for path?
+  app.get("/api/dashboard/:id", function (req, res) {
     db.Educator.findOne({
-        where: {
-          id: req.params.id
-        }
-      })
-      .then(function(dbEducator) {
-        res.json(dbEducator);
-      });
+      where: {
+        id: req.params.id,
+      },
+    }).then(function (dbEducator) {
+      res.json(dbEducator);
+    });
   });
 
-//Create Route for new Member
-app.post("/api/register", function(req, res) {
+  //Create Route for new Member
+  app.post("/api/register", function (req, res) {
     console.log(req.body);
     db.Educator.create({
       first_name: req.body.first_name,
@@ -25,47 +23,45 @@ app.post("/api/register", function(req, res) {
       email: req.body.email,
       password: req.body.password,
       bio: req.body.bio,
-      SpecialityId: req.body.SpecialityId
-    })
-      .then(function(dbEducator) {
-        res.json(dbEducator);
-      });
+      SpecialityId: req.body.SpecialityId,
+    }).then(function (dbEducator) {
+      res.json(dbEducator);
+    });
   });
 
-//Update Route for Updated Member
-app.put("/api/dashboard/:id", function(req, res) {
-    db.Educator.update(req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(dbEducator) {
-        res.json(dbEducator);
-      });
+  //Update Route for Updated Member
+  app.put("/api/dashboard/:id", function (req, res) {
+    db.Educator.update(req.body, {
+      where: {
+        id: req.body.id,
+      },
+    }).then(function (dbEducator) {
+      res.json(dbEducator);
+    });
   });
 
-//Delete Route for Delete Member
-app.delete("/api/dashboard/:id", function(req, res) {
+  //Delete Route for Delete Member
+  app.delete("/api/educator/delete/:id", function (req, res) {
     db.Educator.destroy({
       where: {
-        id: req.params.id
-      }
-    })
-      .then(function(dbEducator) {
-        res.json(dbEducator);
-      });
+        id: req.params.id,
+      },
+    }).then(function (dbEducator) {
+      res.json(dbEducator);
+    });
   });
 
-//Get route for search page. Need to adjust where clause
-  app.get("/api/search", function(req, res) {
+  //Get route for search page. Need to adjust where clause
+  app.get("/api/search/:SpecialityId", function (req, res) {
+    console.log(req.body);
+
     db.Educator.findAll({
-        where: {
-          SubjectId: req.body.SubjectId,
-          SpecialityId: req.body.SpecialityId
-        }
-      })
-      .then(function(dbEducator) {
+      where: {
+        // SubjectId: req.params.subjectId,
+        SpecialityId: req.params.specialtyId,
+      },
+    })
+      .then(function (dbEducator) {
         res.json(dbEducator);
       });
   });

@@ -20,7 +20,7 @@
     <fieldset class="uk-fieldset">
         <div class="uk-margin">
             <legend class="uk-legend">Browse by Subject</legend>
-            <select class="uk-select" id="subjectSelection">
+            <select class="uk-select" name="subject" id="subjectSelection">
                 <option value=1>Language Arts</option>
                 <option value=2>Math</option>
                 <option value=3>Science</option>
@@ -31,7 +31,7 @@
 
         <div class="uk-margin">
             <legend class="uk-legend">Browse by Specialty</legend>
-            <select class="uk-select" id="specialtySelection">
+            <select class="uk-select" name="specialty" id="specialtySelection">
                 <option value=1>Reading</option>
                 <option value=2>Writing</option>
                 <option value=3>Algebra</option>
@@ -49,6 +49,10 @@
                 <option value=15>Performing Arts</option>
             </select>
         </div>
+
+        <div class="uk-margin">
+            <button type="submit">Search</button>
+        </div>
     </fieldset>
 </form>
 
@@ -65,3 +69,4 @@
           {{/each}}
     </ul>
 </li>
+
