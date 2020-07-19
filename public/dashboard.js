@@ -4,14 +4,14 @@ $(document).ready(function () {
   const dashboardUpdate = $(".dashboard-update");
   const updateInfo = $("#updateInformation");
   const updateBtn = $("#updateButton");
+  const deleteBtn = $("#deleteButton")
 
-  switchDisplay("currentInformation")
+  switchDisplay("currentInformation");
   //Clicking on update account from first view will give you preloaded form
-  updateBtn.on("click", function (even){
+  updateBtn.on("click", function (even) {
     event.preventDefault();
     switchDisplay("updateInformation");
-  })
-    
+  });
 
   //Update post function, somehow when you click "Save" the update will go to put route, and page reloads
   function updatePost(Educator) {
@@ -24,17 +24,6 @@ $(document).ready(function () {
     });
   }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
-
-
-
-
-
-
-
   function switchDisplay(toDisplay) {
     if (toDisplay === "currentInformation") {
       $("#currentInformation").attr("style", "display: block;");
@@ -44,6 +33,26 @@ $(document).ready(function () {
       $("#updateInformation").attr("style", "display: block;");
     }
   }
-});
 
-//Delete account button, alert, then delete route with :id to
+  
+  //Delete account button, alert, then delete route with :id to
+  deleteBtn.on("click", deleteAccount(id));
+
+  function deleteAccount(id) {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/dashboard/" + id,
+    })
+      .then(function () {
+        window.location.replace("/");
+      })
+      .catch(handleLoginErr);
+  }
+
+  function handleLoginErr(err) {
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
+  }
+
+
+});
