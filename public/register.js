@@ -43,7 +43,7 @@ $(document).ready(function () {
         bio: bio
       })
         .then(function(data) {
-          window.location.replace("/dashboard/" + Educator.id);
+          window.location.replace("/dashboard/" + data.id);
           // If there's an error, handle it by throwing up a bootstrap alert
         })
         .catch(handleLoginErr);
