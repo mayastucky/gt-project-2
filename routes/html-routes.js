@@ -12,8 +12,8 @@ module.exports = function (app) {
   });
 
   // Get route to render educator information
-  app.get("/dashboard", function (req, res) {
-    res.render("dashboard");
+  app.get("/dashboard/", function (req, res) {
+    res.render("dashboard/" + res.id);
   });
 
   // Get route to render registration page
