@@ -16,9 +16,14 @@ module.exports = function (app) {
   app.get("/dashboard/:id", function (req, res) {
     // find the data here
     //
-    db.Educator.findOne({}).then((educator) => {
+    db.Educator.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then((educator) => {
+      // console.log("Line 20 educator",educator);
       res.render("dashboard", {
-        educator,
+     educator
       });
     });
   });
