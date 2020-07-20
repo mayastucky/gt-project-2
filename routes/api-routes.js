@@ -1,4 +1,5 @@
 const db = require("../models");
+const passport = require("../config/passport");
 
 module.exports = function (app) {
   //Get route to display member info
@@ -51,13 +52,10 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/api/login", function (req, res) {
-    console.log(req.body);
-    db.Educator.findOne({
-      where: { email: req.body.email },
-    }).then(function (educator) {
-      console.log(educator);
-    });
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {
+    // console.log(req.body);
+    console.log(req.user)
+    res.json(req.user)
   });
 
   //Get route for search page. Need to adjust where clause
@@ -69,7 +67,7 @@ module.exports = function (app) {
         SpecialityId: req.params.SpecialityId,
       },
     }).then(function (educatorData) {
-      console.log(educatorData);
+      // console.log(educatorData);
       res.json(dbEducator);
     });
   });
