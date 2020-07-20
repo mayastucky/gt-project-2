@@ -6,7 +6,7 @@
     </div>
 </nav>
 
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="currentInformation">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="currentInformation" style="margin:auto">
     <h3 class="uk-card-title">Account Information</h3>
     <ul>
         <li>First Name: {{educator.first_name}}</li>
@@ -15,11 +15,12 @@
         <li>Subject: </li>
         <li>Specialty: </li>
     </ul>
+    <button class="uk-button uk-button-default" id="updateButton" type="button">Account Settings</button>
 </div>
-<button class="uk-button uk-button-default" id="updateButton" type="button">Account Settings</button>
 
 
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="updateInformation">
+
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="updateInformation" style="margin:auto">
     <h3 class="uk-card-title">Update Information</h3>
     <form>
         <fieldset class="uk-fieldset">
@@ -66,9 +67,9 @@
                     <option value=15>Performing Arts</option>
                 </select>
             </div>
-            <button class="uk-button uk-button-default" id="saveButton" type="submit">Save</button>
+            <button class="uk-button-large uk-button-primary" id="saveButton" type="submit">Save</button>
         </fieldset>
     </form>
-    <button class="uk-button uk-button-danger" id="deleteButton" type="submit">Delete Account</button>
+    <br>
+    <button class="uk-button-small uk-button-danger" id="deleteButton" type="submit">Delete Account</button>
 </div>
-
