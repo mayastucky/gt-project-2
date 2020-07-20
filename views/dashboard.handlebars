@@ -12,6 +12,8 @@
     <ul>
         <li>First Name: {{educator.dataValues.first_name}}</li>
         <li>Last Name:{{educator.dataValues.last_name}} </li>
+        <li>Email: {{educator.dataValues.email}}</li>
+        <li>Subject: {{educator.dataValues.bio}}</li>
         <li>Subject: {{educator.dataValues.subject}}</li>
         <li>Specialty: {{educator.dataValues.SpecialityId}}</li>
     </ul>
@@ -28,13 +30,16 @@
             {{!-- <legend class="uk-legend">Legend</legend> --}}
 
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="THIS.FIRST_NAME">
+                First Name
+                <input class="uk-input" type="text" placeholder={{educator.dataValues.first_name}}>
             </div>
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="THIS.LAST_NAME">
+                Last Name
+                <input class="uk-input" type="text" placeholder={{educator.dataValues.last_name}} >
             </div>
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="THIS.EMAIL">
+                Bio
+                <input class="uk-input" type="text" placeholder={{educator.dataValues.bio}}>
             </div>
             {{!-- <div class="uk-margin">
                 <input class="uk-input" type="text" placeholder="THIS.PASSWORD">

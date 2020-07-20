@@ -12,7 +12,7 @@ $(document).ready(function () {
       email: emailInput.val().trim(),
       password: passwordInput.val().trim(),
     };
-    console.log(userData);
+    // console.log(userData);
 
     if (!userData.email || !userData.password) {
       return alert("This password or email is incorrect.");
@@ -31,10 +31,10 @@ $(document).ready(function () {
       password: password,
     })
       .then(function (data) {
-        window.location.replace("/api/dashboard/" + Educator.id);
-        // If there's an error, log the error
+        window.location.replace("/dashboard/" + data.id);
+        // If there's an error, log the error 
       })
-      .catch(function (err) {
+      .catch(function (err) {  
         console.log(err);
       });
   }
