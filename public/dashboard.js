@@ -41,13 +41,9 @@ $(document).ready(function () {
 // Delete: What Educator to Delete
   function deleteEducator() {
     console.log("Delete Clicked");
-    const currentEducator = $(this)
-    $(this)
-    .parent()
-    .parent()
-    .data();
-    console.log(currentEducator);
-    deleteAccount(currentEducator.id);
+    const currentEducator = $(this).data("edid");
+  
+    deleteAccount(currentEducator);
   }
   
 

@@ -45,7 +45,7 @@ module.exports = function (app) {
   app.delete("/api/dashboard/delete/:id", function (req, res) {
     db.Educator.destroy({
       where: {
-        id: req.params.id,
+        id: parseInt(req.params.id),
       },
     }).then(function (dbEducator) {
       res.json(dbEducator);
