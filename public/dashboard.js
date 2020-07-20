@@ -16,8 +16,8 @@ $(document).ready(function () {
     switchDisplay("updateInformation");
   });
 
-  //Update post function, somehow when you click "Save" the update will go to put route, and page reloads
-  function updatePost(Educator) {
+  //Update educator function, somehow when you click "Save" the update will go to put route, and page reloads
+  function updateEducator(Educator) {
     $.ajax({
       method: "PUT",
       url: "/api/dashboard/:id",
