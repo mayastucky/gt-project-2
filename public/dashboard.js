@@ -44,6 +44,7 @@ $(document).ready(function () {
   function deleteEducator() {
     console.log("Delete Clicked");
     const currentEducator = $(this)
+    console.log(currentEducator.id);
     deleteAccount(currentEducator.id);
   }
 
