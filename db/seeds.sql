@@ -13,5 +13,13 @@ INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId
 
 -- INSERT INTO Specialities (name, SubjectId, createdAt, updatedAt) VALUES ("Reading", 1, now(), now()), ("Writing", 1, now(), now()), ("Algebra", 2, now(), now()), ("Geometry", 2, now(), now()), ("Elementary", 2, now(), now()), ("Biology", 3, now(), now()), ("Chemistry", 3, now(), now()), ("Astronomy", 3, now(), now()),("American History", 4, now(), now()), ("Political Science", 4, now(), now()), ("Elementary", 4, now(), now()), ("Physical Education", 5, now(), now()), ("Art", 5, now(), now()), ("Music",5, now(), now()),("Performing Arts",5, now(), now());
 
-INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Ashley", "Hill", "ahill@gmail.com", "password", "I've always wanted to be a teacher ever since I was a little girl. I'm love teaching Art.", now(), now(), 28);
-INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiffany", "Baker", "tbake@gmail.com", "password", "Art is an expression of who are. I'm love teaching Art.", now(), now(), 28);
+-- In JAWSDB
+-- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Ashley", "Hill", "ahill@gmail.com", "password", "I've always wanted to be a teacher ever since I was a little girl. I'm love teaching Art.", now(), now(), 28);
+-- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiffany", "Baker", "tbake@gmail.com", "password", "Art is an expression of who are. I'm love teaching Art.", now(), now(), 28);
+--Performing Arts
+-- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Taye", "Diggs", "tdiggs@gmail.com", "password", "Being a performer is what I love, its who I am.", now(), now(), 30);
+-- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Summer", "Childs", "schilds@gmail.com", "password", "You must become the character that you portray, both on and off camera.", now(), now(), 28);
+
+Music
+INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Billy", "Lee", "blee@gmail.com", "password", "Music flows through your heart, soul and body.", now(), now(), 29);
+INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiny", "Jones", "tjones@gmail.com", "password", "I've been teaching hip hop, jazz and blues for over 20 years.", now(), now(), 29);
