@@ -41,14 +41,16 @@ module.exports = function (app) {
     });
   });
 
-  //Delete Route for Delete Member
-  app.delete("/api/dashboard/:id", function (req, res) {
-    db.Educator.destroy({
-      where: {
-        id: req.params.id,
-      },
-    }).then(function (dbEducator) {
-      res.json(dbEducator);
+    //Delete Route for Delete Member
+    app.delete("/api/dashboard/delete/:id", function (req, res) {
+        db.Educator.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+            .then(function (dbEducator) {
+                res.json(dbEducator);
+            });
     });
   });
 
