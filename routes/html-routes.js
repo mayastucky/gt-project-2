@@ -1,4 +1,5 @@
 // We need a app.get to the path /handlebars
+const db = require("../models");
 
 // Get route to render the route page
 module.exports = function (app) {
@@ -12,8 +13,14 @@ module.exports = function (app) {
   });
 
   // Get route to render educator information
-  app.get("/dashboard/", function (req, res) {
-    res.render("dashboard/" + res.id);
+  app.get("/dashboard", function (req, res) {
+    // find the data here
+    //
+    db.Educator.findOne({}).then((educator) => {
+      res.render("dashboard", {
+        educator,
+      });
+    });
   });
 
   // Get route to render registration page
