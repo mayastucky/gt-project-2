@@ -37,23 +37,21 @@ $(document).ready(function () {
     }
   }
 
-
-
-
-//Delete: What Educator to Delete
+//HOW CAN WE GET THE CLICK TO RECOGNIZE THE ID IN URL????
+// Delete: What Educator to Delete
   function deleteEducator() {
     console.log("Delete Clicked");
-    const currentEducator = $(this)
-    console.log(currentEducator.id);
+    const currentEducator = $(this);
+    console.log(currentEducator);
     deleteAccount(currentEducator.id);
   }
+  
 
 //Delete: Actual Delete function
   function deleteAccount(id) {
-    const currentEducator = $(this)
     $.ajax({
       method: "DELETE",
-      url: "/api/educator/delete/" + currentEducator.id,
+      url: "/api/dashboard/delete/" + id
     })
       .then(function () {
         window.location.replace("/");
@@ -67,6 +65,7 @@ $(document).ready(function () {
   }
 
 
+//End ready
 });
 
 
@@ -75,13 +74,3 @@ $(document).ready(function () {
 
 
 
-  // This function does an API call to delete posts
-  function deletePost(id) {
-    $.ajax({
-      method: "DELETE",
-      url: "/api/posts/" + id
-    })
-      .then(function() {
-        getPosts(postCategorySelect.val());
-      });
-  }
