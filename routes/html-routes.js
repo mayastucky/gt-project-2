@@ -9,6 +9,7 @@ module.exports = function (app) {
 
   //  Get route to render the home page
   app.get("/login", function (req, res) {
+    console.log(req.user)
     res.render("login");
   });
 
@@ -31,8 +32,7 @@ module.exports = function (app) {
   // Get route to render registration page
   app.get("/register", function (req, res) {
     res.render("register");
-  });
-
+  }); 
   // Get route to render update page
   app.get("/update", function (req, res) {
     res.render("update");
