@@ -41,36 +41,25 @@ module.exports = function (app) {
     });
   });
 
-    //Delete Route for Delete Member
-    app.delete("/api/dashboard/delete/:id", function (req, res) {
-        db.Educator.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function (dbEducator) {
-                res.json(dbEducator);
-            });
+  //Delete Route for Delete Member
+  app.delete("/api/dashboard/delete/:id", function (req, res) {
+    db.Educator.destroy({
+      where: {
+        id: req.params.id,
+      },
+    }).then(function (dbEducator) {
+      res.json(dbEducator);
     });
   });
 
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     // console.log(req.body);
-    console.log(req.user)
-    res.json(req.user)
+    console.log(req.user);
+    res.json(req.user);
   });
 
   //Get route for search page. Need to adjust where clause
-  app.get("/api/search/:SpecialityId", function (req, res) {
-    console.log(res);
-    db.Educator.findAll({
-      where: {
-        //   SubjectId: req.body.SubjectId,
-        SpecialityId: req.params.SpecialityId,
-      },
-    }).then(function (educatorData) {
-      // console.log(educatorData);
-      res.json(dbEducator);
-    });
-  });
+  //app.post("/api/search/:SpecialityId", function (req, res) {
+    
+  //});
 };

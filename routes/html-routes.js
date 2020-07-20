@@ -9,7 +9,7 @@ module.exports = function (app) {
 
   //  Get route to render the home page
   app.get("/login", function (req, res) {
-    console.log(req.user)
+    console.log(req.user);
     res.render("login");
   });
 
@@ -19,12 +19,12 @@ module.exports = function (app) {
     //
     db.Educator.findOne({
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
+      },
     }).then((educator) => {
       // console.log("Line 20 educator",educator);
       res.render("dashboard", {
-     educator
+        educator,
       });
     });
   });
@@ -32,14 +32,27 @@ module.exports = function (app) {
   // Get route to render registration page
   app.get("/register", function (req, res) {
     res.render("register");
-  }); 
+  });
   // Get route to render update page
   app.get("/update", function (req, res) {
     res.render("update");
   });
 
-  // Get route to render search results
   app.get("/search", function (req, res) {
-    res.render("search");
+    res.render("search", {});
+  });
+
+  // Get route to render search results
+  app.get("/search/:SpecialityId", function (req, res) {
+    console.log(req.params.SpecialityId);
+
+    db.Educator.findAll({
+      where: {
+        SpecialityId: req.params.SpecialityId,
+      },
+    }).then(function (educators) {
+      console.log(educators);
+      res.render("search", { educators });
+    });
   });
 };
