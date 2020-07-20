@@ -4,7 +4,15 @@ $(document).ready(function () {
   const dashboardUpdate = $(".dashboard-update");
   const updateInfo = $("#updateInformation");
   const updateBtn = $("#updateButton");
-  const deleteBtn = $("#deleteButton")
+  const deleteBtn = $("#deleteButton");
+  const updateFirstNameInput = $("#updateFirstNameInput");
+  const updateLastNameInput = $("#updateLastNameInput");
+  const updateBioInput = $("#updateBioInput");
+  const specialtyInputVal;
+
+  $("#specialty-input").change(function () {
+    return specialtyInputVal = $("#updateSpecialtyInput option:selected").val();
+});
 
   $(deleteBtn).on("click", deleteEducator);
 
@@ -16,12 +24,20 @@ $(document).ready(function () {
     switchDisplay("updateInformation");
   });
 
+
   //Update educator function, somehow when you click "Save" the update will go to put route, and page reloads
-  function updateEducator(Educator) {
+  function updateEducator() {
+    const updateData = {
+      first_name: updateFirstNameInput.val().trim(),
+      last_name: updateLastNameInput .val().trim(),
+      bio: updateBioInput.val().trim(),
+      SpecialityId: parseInt(specialtyInputVal)
+    };
+    console.log(udpateData)
     $.ajax({
       method: "PUT",
       url: "/api/dashboard/:id",
-      data: Educator,
+      data: updateData,
     }).then(function () {
       location.reload("/api/dashboard/:id").catch(handleLoginErr);
     });

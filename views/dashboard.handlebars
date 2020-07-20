@@ -31,31 +31,34 @@
 
             <div class="uk-margin">
                 First Name
-                <input class="uk-input" type="text" placeholder={{educator.dataValues.first_name}}>
+                <input class="uk-input" type="text" id="updateFirstNameInput" placeholder={{educator.dataValues.first_name}}>
             </div>
             <div class="uk-margin">
                 Last Name
-                <input class="uk-input" type="text" placeholder={{educator.dataValues.last_name}} >
+                <input class="uk-input" type="text" id="updateLastNameInput" placeholder={{educator.dataValues.last_name}} >
             </div>
             <div class="uk-margin">
                 Bio
-                <textarea rows="5" cols="50">{{educator.dataValues.bio}}</textarea>
+                <textarea rows="5" cols="50" id="updateBioInput">{{educator.dataValues.bio}}</textarea>
                 {{!--<input class="uk-input" type="text" placeholder={{educator.dataValues.bio}}> --}}
             </div>
             {{!-- <div class="uk-margin">
                 <input class="uk-input" type="text" placeholder="THIS.PASSWORD">
             </div> --}}
 
-            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+
+{{!-- Not worrying about updating subject right now. --}}
+
+            {{!-- <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" id="updateSubjectInput">
                 <label><input class="uk-radio" type="radio" name="radio2" value=1>Language Arts</label><br>
                 <label><input class="uk-radio" type="radio" name="radio2" value=2>Math</label><br>
                 <label><input class="uk-radio" type="radio" name="radio2" value=3>Science</label><br>
                 <label><input class="uk-radio" type="radio" name="radio2" value=4>Social Studies</label><br>
                 <label><input class="uk-radio" type="radio" name="radio2" value=5>Other</label>
-            </div>
+            </div> --}}
 
             <div class="uk-margin">
-                <select class="uk-select">
+                <select class="uk-select" id="updateSpecialtyInput">
                     <option value=1>Reading</option>
                     <option value=2>Writing</option>
                     <option value=3>Algebra</option>
