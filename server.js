@@ -4,6 +4,8 @@
  */
 const express = require("express");
 const exphbs = require("express-handlebars");
+const passport = require("./config/passport");
+const session = require("express-session");
 
 /**
  * DEFINE VARIABLES
@@ -31,6 +33,9 @@ app.set("view engine", "handlebars");
  */
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 // Routes

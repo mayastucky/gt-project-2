@@ -25,7 +25,7 @@ module.exports = function (app) {
             email: req.body.email,
             password: req.body.password,
             bio: req.body.bio,
-            SpecialityId: req.body.SpecialityId
+            SpecialityId: parseInt(req.body.SpecialityId)
         })
             .then(function (dbEducator) {
                 res.json(dbEducator);

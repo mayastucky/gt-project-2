@@ -4,9 +4,14 @@ $(document).ready(function () {
     const passwordInput = $("input#password-input");
     const firstNameInput = $("input#firstName-input");
     const lastNameInput = $("input#lastName-input");
+    let specialtyInputVal = '';
     const bio = $("#bio")
 
-  
+    $("#specialty-input").change(function () {
+      return specialtyInputVal = $("#specialty-input option:selected").val();
+  });
+
+
     // When the signup button is clicked, we validate the email and password are not blank
     $("#registerButton").on("click", function(event) {
       event.preventDefault();
@@ -16,13 +21,14 @@ $(document).ready(function () {
         password: passwordInput.val().trim(),
         first_name: firstNameInput.val().trim(),
         last_name: lastNameInput.val().trim(),
-        bio: bio.val().trim()
+        bio: bio.val().trim(),
+        ["specialty-input"]: parseInt(specialtyInputVal)
       };
       console.log(userData)
   
-    //   if (!userData.email || !userData.password) {
-    //     return;
-    //   }
+      if (!userData.email || !userData.password) {
+        return;
+      }
       // If we have an email and password, run the signUpUser function
       signUpUser(userData.email, userData.password, userData.first_name, userData.last_name, userData.bio);
       emailInput.val("");
@@ -40,7 +46,8 @@ $(document).ready(function () {
         password: password,
         first_name: first_name,
         last_name: last_name,
-        bio: bio
+        bio: bio,
+        SpecialityId : specialtyInputVal
       })
         .then(function(data) {
           window.location.replace("/dashboard/" + data.id);

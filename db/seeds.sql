@@ -4,7 +4,24 @@ INSERT INTO Specialities (name, SubjectId) VALUES ("Reading", 1), ("Writing", 1)
 
 INSERT INTO Subjects (name) VALUES ("Language Arts"), ("Math"), ("Science"), ("Social Studies"), ("Other");
 
-INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId) VALUES ("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a teacher.", 1);
+INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId) VALUES ("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a reading teacher.", 1),
+("Michelle", "Carson", "mcarson@gmail", "password3", "Hi, I am a teacher.", 2),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a writing teacher.", 3),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a algebra teacher.", 4),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a geometry teacher.", 5),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am an elementary math teacher.", 6),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a biology teacher.", 7),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a checmistry teacher.", 8),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am an astronomy teacher.", 9),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am an American History teacher.", 10),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a political science teacher.", 11),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am an elementary social studies teacher.", 12),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a physical education teacher.", 13),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am an art teacher.", 14),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a music teacher.", 15),
+("Lisa", "Boyet", "lboyet@gmail", "password2", "Hi, I am a theatre teacher.", 16),
+;
+
 
 --How do we do grade level?
 
