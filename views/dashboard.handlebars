@@ -8,12 +8,12 @@
 
 <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="currentInformation" style="margin:auto">
     <h3 class="uk-card-title">Account Information</h3>
+    {{!-- {{log educator.dataValues}} --}}
     <ul>
-        <li>First Name: {{educator.first_name}}</li>
-        <li>Last Name: </li>
-        <li>Email: </li>
-        <li>Subject: </li>
-        <li>Specialty: </li>
+        <li>First Name: {{educator.dataValues.first_name}}</li>
+        <li>Last Name:{{educator.dataValues.last_name}} </li>
+        <li>Subject: {{educator.dataValues.subject}}</li>
+        <li>Specialty: {{educator.dataValues.SpecialityId}}</li>
     </ul>
     <button class="uk-button uk-button-default" id="updateButton" type="button">Account Settings</button>
 </div>
