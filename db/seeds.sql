@@ -23,3 +23,4 @@ INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId
 Music
 INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Billy", "Lee", "blee@gmail.com", "password", "Music flows through your heart, soul and body.", now(), now(), 29);
 INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiny", "Jones", "tjones@gmail.com", "password", "I've been teaching hip hop, jazz and blues for over 20 years.", now(), now(), 29);
+
