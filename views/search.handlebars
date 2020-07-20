@@ -16,11 +16,12 @@
     </div>
 </nav>
 
-<form>
+<form style="width: 50%; margin-left: 375px">
     <fieldset class="uk-fieldset">
         <div class="uk-margin">
             <legend class="uk-legend">Browse by Subject</legend>
             <select class="uk-select" name="subject" id="subjectSelection">
+                <option></option>
                 <option value=1>Language Arts</option>
                 <option value=2>Math</option>
                 <option value=3>Science</option>
@@ -30,8 +31,9 @@
         </div>
 
         <div class="uk-margin">
-            <legend class="uk-legend">Browse by Specialty</legend>
+            <legend class="uk-legend">Optional: Choose a Specialty</legend>
             <select class="uk-select" name="specialty" id="specialtySelection">
+                <option></option>
                 <option value=1>Reading</option>
                 <option value=2>Writing</option>
                 <option value=3>Algebra</option>
@@ -51,22 +53,21 @@
         </div>
 
         <div class="uk-margin">
-            <button type="submit">Search</button>
+            <button class="uk-button uk-button-default" type="submit" id="searchButton">Search</button>
         </div>
     </fieldset>
 </form>
 
 <li>
-    <h3>Choose Your Educator</h3>
+    <h3>Results Will Show Below</h3>
     <ul>
         {{#each Educators}}
         <li>
             <p>Name: {{this.first_name}} {{this.last_name}}</p>
             <p>Subject: {{this.SubjectId}}</p>
-            <p>Specilty: {{this.SpecialityId}}</p>
+            <p>Specialty: {{this.SpecialityId}}</p>
             <p>Bio: {{this.bio}}</p>
         </li>
-          {{/each}}
+        {{/each}}
     </ul>
 </li>
-
