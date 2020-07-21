@@ -1,5 +1,6 @@
 // We need a app.get to the path /handlebars
 const db = require("../models");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
 // Get route to render the route page
 module.exports = function (app) {
@@ -16,7 +17,7 @@ module.exports = function (app) {
   // Get route to render educator information
   app.get("/dashboard/:id", function (req, res) {
     // find the data here
-    //
+    // 
     db.Educator.findOne({
       where: {
         id: req.params.id,
