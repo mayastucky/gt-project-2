@@ -26,9 +26,9 @@ INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId
 --How do we do grade level?
 
 --If I need to re-created the DB in workbench-->
--- INSERT INTO Subjects (name, createdAt, updatedAt) VALUES ("Language Arts", now(), now()), ("Math", now(), now()), ("Science", now(), now()), ("Social Studies", now(), now()), ("Other", now(), now());
+INSERT INTO Subjects (name, createdAt, updatedAt) VALUES ("Language Arts", now(), now()), ("Math", now(), now()), ("Science", now(), now()), ("Social Studies", now(), now()), ("Other", now(), now());
 
--- INSERT INTO Specialities (name, SubjectId, createdAt, updatedAt) VALUES ("Reading", 1, now(), now()), ("Writing", 1, now(), now()), ("Algebra", 2, now(), now()), ("Geometry", 2, now(), now()), ("Elementary", 2, now(), now()), ("Biology", 3, now(), now()), ("Chemistry", 3, now(), now()), ("Astronomy", 3, now(), now()),("American History", 4, now(), now()), ("Political Science", 4, now(), now()), ("Elementary", 4, now(), now()), ("Physical Education", 5, now(), now()), ("Art", 5, now(), now()), ("Music",5, now(), now()),("Performing Arts",5, now(), now());
+INSERT INTO Specialities (name, SubjectId, createdAt, updatedAt) VALUES ("Reading", 1, now(), now()), ("Writing", 1, now(), now()), ("Algebra", 2, now(), now()), ("Geometry", 2, now(), now()), ("Elementary", 2, now(), now()), ("Biology", 3, now(), now()), ("Chemistry", 3, now(), now()), ("Astronomy", 3, now(), now()),("American History", 4, now(), now()), ("Political Science", 4, now(), now()), ("Elementary", 4, now(), now()), ("Physical Education", 5, now(), now()), ("Art", 5, now(), now()), ("Music",5, now(), now()),("Performing Arts",5, now(), now());
 
 -- In JAWSDB
 -- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Ashley", "Hill", "ahill@gmail.com", "password", "I've always wanted to be a teacher ever since I was a little girl. I'm love teaching Art.", now(), now(), 28);
@@ -38,6 +38,6 @@ INSERT INTO Educators (first_name, last_name, email, password, bio, SpecialityId
 -- INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Summer", "Childs", "schilds@gmail.com", "password", "You must become the character that you portray, both on and off camera.", now(), now(), 28);
 
 Music
-INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Billy", "Lee", "blee@gmail.com", "password", "Music flows through your heart, soul and body.", now(), now(), 29);
-INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiny", "Jones", "tjones@gmail.com", "password", "I've been teaching hip hop, jazz and blues for over 20 years.", now(), now(), 29);
+INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Billy", "Lee", "blee@gmail.com", "password", "Music flows through your heart, soul and body.", now(), now(), 14);
+INSERT INTO Educators (first_name, last_name, email, password, bio, createdAt, updatedAt, SpecialityId) VALUES ("Tiny", "Jones", "tjones@gmail.com", "password", "I've been teaching hip hop, jazz and blues for over 20 years.", now(), now(), 14);
 

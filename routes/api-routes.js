@@ -32,45 +32,40 @@ module.exports = function (app) {
 
   //Update Route for Updated Member
   app.put("/api/dashboard/:id", function (req, res) {
-    db.Educator.update(req.body, {
+    console.log(req.body);
+    db.Educator.findOne({
       where: {
-        id: req.body.id,
+        id: parseInt(req.body.id),
+      },
+    }).then(function (dbEducator) {
+      dbEducator.update({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        bio: req.body.bio
+      })
+      res.json(dbEducator);
+    });
+  });
+
+  //Delete Route for Delete Member
+  app.delete("/api/dashboard/delete/:id", function (req, res) {
+    db.Educator.destroy({
+      where: {
+        id: parseInt(req.params.id),
       },
     }).then(function (dbEducator) {
       res.json(dbEducator);
     });
   });
 
-    //Delete Route for Delete Member
-    app.delete("/api/dashboard/delete/:id", function (req, res) {
-        db.Educator.destroy({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function (dbEducator) {
-                res.json(dbEducator);
-            });
-    });
-  });
-
   app.post("/api/login", passport.authenticate("local"), function (req, res) {
     // console.log(req.body);
-    console.log(req.user)
-    res.json(req.user)
+    console.log(req.user);
+    res.json(req.user);
   });
 
   //Get route for search page. Need to adjust where clause
-  app.get("/api/search/:SpecialityId", function (req, res) {
-    console.log(res);
-    db.Educator.findAll({
-      where: {
-        //   SubjectId: req.body.SubjectId,
-        SpecialityId: req.params.SpecialityId,
-      },
-    }).then(function (educatorData) {
-      // console.log(educatorData);
-      res.json(dbEducator);
-    });
-  });
+  //app.post("/api/search/:SpecialityId", function (req, res) {
+
+  //});
 };
