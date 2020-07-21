@@ -50,6 +50,15 @@ h3 {
   width: 50%;
 }
 
+#registrationForm {
+  justify-content: center;
+  margin-left: 35%;
+}
 
+#registerButton {
+  margin-left: 17%;
+}
 
-
+#searchResults {
+  margin-left: 45%;
+}
