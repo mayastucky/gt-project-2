@@ -60,5 +60,18 @@ h3 {
 }
 
 #searchResults {
-  margin-left: 45%;
+  /* margin-left: 10%; */
+  font-family: "Montserrat", sans-serif;
+}
+
+#searchForm {
+  width: 50%;
+  margin-left: 375px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+#resultsBelow,
+.uk-card-title {
+  font-family: "Montserrat", sans-serif;
 }
