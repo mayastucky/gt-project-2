@@ -60,7 +60,7 @@ $(document).ready(function () {
     }
   }
 
-//HOW CAN WE GET THE CLICK TO RECOGNIZE THE ID IN URL???? if we did not have undefined as id it would work
+//
 // Delete: What Educator to Delete
   function deleteEducator() {
     console.log("Delete Clicked");
