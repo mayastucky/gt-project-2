@@ -15,13 +15,17 @@ $(document).ready(function () {
     return specialtyInputVal = $("#updateSpecialtyInput option:selected").val();
 });
 
-  $(deleteBtn).on("click", deleteEducator);
-  // $(deleteBtn).on("click", function(){
-  //   let confirm= confirm("Are you sure you want to delete your account?");
-  //   if (confirm===true){
-  //     deleteEducator();
-  //   }
-  // });
+//Original On Click for Delete
+  // $(deleteBtn).on("click", deleteEducator);
+
+  $(deleteBtn).on("click", function(){
+    const currentEducator = $(this).data("edid");
+    console.log(currentEducator);
+    let confirmation= confirm("Are you sure you want to delete your account?");
+    if (confirmation===true){
+      deleteEducator(currentEducator);
+    }
+  });
 
   $(saveBtn).on("click", updateEducator);
 
@@ -71,9 +75,7 @@ $(document).ready(function () {
 
 //
 // Delete: What Educator to Delete
-  function deleteEducator() {
-    console.log("Delete Clicked");
-    const currentEducator = $(this).data("edid");
+  function deleteEducator(currentEducator) {
     deleteAccount(currentEducator);
   }
   

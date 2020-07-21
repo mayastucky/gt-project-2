@@ -50,6 +50,43 @@ h3 {
   width: 50%;
 }
 
+#registrationForm {
+  justify-content: center;
+  margin-left: 35%;
+}
 
+#registerButton {
+  margin-left: 17%;
+}
 
+#searchResults {
+  /* margin-left: 10%; */
+  font-family: "Montserrat", sans-serif;
+}
 
+#searchForm {
+  width: 50%;
+  margin-left: 375px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+#resultsBelow,
+.uk-card-title {
+  font-family: "Montserrat", sans-serif;
+}
+
+#currentInformation,
+#updateInformation {
+  margin-left: 25%;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#deleteButton {
+  float: right;
+}
+
+#saveButton {
+  margin-left: 45%;
+}

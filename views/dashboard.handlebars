@@ -3,26 +3,28 @@
         {{!-- <img src="/public/img/IMG_3188.JPG"> --}}
         <a class="uk-navbar-item uk-logo" href="/"
             style="font-family: 'Delius Unicase', cursive; color:white">Maestro</a>
+        <img src="https://i.imgur.com/b4OGdPV.png" height="100" width="75">
     </div>
 </nav>
 
 <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="currentInformation" style="margin:auto">
     <h3 class="uk-card-title">Account Information</h3>
     {{!-- {{log educator.dataValues}} --}}
-    <ul>
-        <li>First Name: {{educator.dataValues.first_name}}</li>
-        <li>Last Name:{{educator.dataValues.last_name}} </li>
-        <li>Email: {{educator.dataValues.email}}</li>
-        <li>Bio: {{educator.dataValues.bio}}</li>
-        <li>Subject: {{educator.dataValues.subject}}</li>
-        <li>Specialty: {{educator.dataValues.SpecialityId}}</li>
-    </ul>
+    <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-2/512/User_Interface-10-512.png"
+        alt="sample user picture" height="100" width="100">
+    <p>First Name: {{educator.dataValues.first_name}}</p>
+    <p>Last Name:{{educator.dataValues.last_name}} </p>
+    <p>Email: {{educator.dataValues.email}}</p>
+    <p>Bio: {{educator.dataValues.bio}}</p>
+    {{!-- <p>Subject: {{educator.dataValues.subject}}</p>
+    <p>Specialty: {{educator.dataValues.SpecialityId}}</p> --}}
+
     <button class="uk-button uk-button-default" id="updateButton" type="button">Account Settings</button>
 </div>
 
 
 
-<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="updateInformation" style="margin:auto">
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m" id="updateInformation">
     <h3 class="uk-card-title">Update Information</h3>
     <form>
         <fieldset class="uk-fieldset">
@@ -31,54 +33,25 @@
 
             <div class="uk-margin">
                 First Name
-                <input class="uk-input" type="text" id="updateFirstNameInput" placeholder={{educator.dataValues.first_name}}>
+                <input class="uk-input" type="text" id="updateFirstNameInput"
+                    placeholder={{educator.dataValues.first_name}}>
             </div>
             <div class="uk-margin">
                 Last Name
-                <input class="uk-input" type="text" id="updateLastNameInput" placeholder={{educator.dataValues.last_name}} >
+                <input class="uk-input" type="text" id="updateLastNameInput"
+                    placeholder={{educator.dataValues.last_name}}>
             </div>
             <div class="uk-margin">
                 Bio
-                <textarea rows="5" cols="50" id="updateBioInput">{{educator.dataValues.bio}}</textarea>
-                {{!--<input class="uk-input" type="text" placeholder={{educator.dataValues.bio}}> --}}
+                <br>
+                <textarea class="uk-textarea" rows="5" cols="50"
+                    id="updateBioInput">{{educator.dataValues.bio}}</textarea>
             </div>
-            {{!-- <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="THIS.PASSWORD">
-            </div> --}}
-
-
-{{!-- Not worrying about updating subject right now. --}}
-
-            {{!-- <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid" id="updateSubjectInput">
-                <label><input class="uk-radio" type="radio" name="radio2" value=1>Language Arts</label><br>
-                <label><input class="uk-radio" type="radio" name="radio2" value=2>Math</label><br>
-                <label><input class="uk-radio" type="radio" name="radio2" value=3>Science</label><br>
-                <label><input class="uk-radio" type="radio" name="radio2" value=4>Social Studies</label><br>
-                <label><input class="uk-radio" type="radio" name="radio2" value=5>Other</label>
-            </div> --}}
-{{!-- 
-            <div class="uk-margin">
-                <select class="uk-select" id="updateSpecialtyInput">
-                    <option value=1>Reading</option>
-                    <option value=2>Writing</option>
-                    <option value=3>Algebra</option>
-                    <option value=4>Geometry</option>
-                    <option value=5>Elementary Math</option>
-                    <option value=6>Biology</option>
-                    <option value=7>Chemistry</option>
-                    <option value=8>Astronomy</option>
-                    <option value=9>American History</option>
-                    <option value=10>Political Science</option>
-                    <option value=11>Elementary Social Studies</option>
-                    <option value=12>Physical Education</option>
-                    <option value=13>Art</option>
-                    <option value=14>Music</option>
-                    <option value=15>Performing Arts</option>
-                </select>
-            </div> --}}
-            <button class="uk-button-large uk-button-primary" id="saveButton" type="submit" data-edid={{educator.dataValues.id}}>Save</button>
+            <button class="uk-button uk-button-primary" id="saveButton" type="submit"
+                data-edid={{educator.dataValues.id}}>Save</button>
         </fieldset>
     </form>
     <br>
-    <button class="uk-button-small uk-button-danger" id="deleteButton" type="submit" data-edid={{educator.dataValues.id}}>Delete Account</button>
+    <button class="uk-button-small uk-button-danger" id="deleteButton" type="submit"
+        data-edid={{educator.dataValues.id}}>Delete Account</button>
 </div>

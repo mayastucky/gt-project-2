@@ -1,8 +1,8 @@
 <nav class="uk-navbar-container uk-margin" uk-navbar id="navbar">
     <div class="uk-navbar-center">
-        {{!-- <img src="/public/img/IMG_3188.JPG"> --}}
         <a class="uk-navbar-item uk-logo" href="/"
             style="font-family: 'Delius Unicase', cursive; color:white">Maestro</a>
+        <img src="https://i.imgur.com/b4OGdPV.png" height="100" width="75">
         {{!-- <div class="uk-navbar-center-right">
             <div>
                 <ul class="uk-navbar-nav">
@@ -16,7 +16,7 @@
     </div>
 </nav>
 
-<form style="width: 50%; margin-left: 375px">
+<form id="searchForm">
     <fieldset class="uk-fieldset">
         <div class="uk-margin">
             <legend class="uk-legend">Browse by Subject</legend>
@@ -34,21 +34,21 @@
             <legend class="uk-legend">Optional: Choose a Specialty</legend>
             <select class="uk-select" name="specialty" id="specialtySelection">
                 <option></option>
-                <option value=1>Reading</option>
-                <option value=2>Writing</option>
-                <option value=3>Algebra</option>
-                <option value=4>Geometry</option>
-                <option value=5>Elementary Math</option>
-                <option value=6>Biology</option>
-                <option value=7>Chemistry</option>
-                <option value=8>Astronomy</option>
-                <option value=9>American History</option>
-                <option value=10>Political Science</option>
-                <option value=11>Elementary Social Studies</option>
-                <option value=12>Physical Education</option>
-                <option value=13>Art</option>
-                <option value=14>Music</option>
-                <option value=15>Performing Arts</option>
+                <option value=16>Reading</option>
+                <option value=17>Writing</option>
+                <option value=18>Algebra</option>
+                <option value=19>Geometry</option>
+                <option value=20>Elementary Math</option>
+                <option value=21>Biology</option>
+                <option value=22>Chemistry</option>
+                <option value=23>Astronomy</option>
+                <option value=24>American History</option>
+                <option value=25>Political Science</option>
+                <option value=26>Elementary Social Studies</option>
+                <option value=27>Physical Education</option>
+                <option value=28>Art</option>
+                <option value=29>Music</option>
+                <option value=30>Performing Arts</option>
             </select>
         </div>
 
@@ -58,15 +58,23 @@
     </fieldset>
 </form>
 
-<li>
-    <h3>Results Will Show Below</h3>
-    <ul>
-        {{#each educators}}
-        <li>
-            <p>Name: {{dataValues.first_name}} {{dataValues.last_name}}</p>
-            <p>Specialty: {{dataValues.SpecialityId}}</p>
+
+<h3 id="resultsBelow">Results Will Show Below</h3>
+{{#each educators}}
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid id="searchResults">
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-2/512/User_Interface-10-512.png" alt=""
+            height="100" width="100" uk-cover>
+        <canvas width="300" height="200"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{dataValues.first_name}} {{dataValues.last_name}}</h3>
+            {{!-- <p>Specialty: {{dataValues.SpecialityId}}</p> --}}
             <p>Bio: {{dataValues.bio}}</p>
-        </li>
-        {{/each}}
-    </ul>
-</li>
+            <br>
+            <p><a href="https://calendly.com/yourmaestroteacher">Schedule your Educator here!</a> </p>
+        </div>
+    </div>
+</div>
+{{/each}}
