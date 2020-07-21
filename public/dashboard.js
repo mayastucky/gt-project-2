@@ -4,24 +4,47 @@ $(document).ready(function () {
   const dashboardUpdate = $(".dashboard-update");
   const updateInfo = $("#updateInformation");
   const updateBtn = $("#updateButton");
-  const deleteBtn = $("#deleteButton")
+  const deleteBtn = $("#deleteButton");
+  const updateFirstNameInput = $("#updateFirstNameInput");
+  const updateLastNameInput = $("#updateLastNameInput");
+  const updateBioInput = $("#updateBioInput");
+  const saveBtn = $("#saveButton");
+  let specialtyInputVal = '';
+
+  $("#specialty-input").change(function () {
+    return specialtyInputVal = $("#updateSpecialtyInput option:selected").val();
+});
 
   $(deleteBtn).on("click", deleteEducator);
-
+  $(saveBtn).on("click", updateEducator);
 
   switchDisplay("currentInformation");
   //Clicking on update account from first view will give you preloaded form
-  updateBtn.on("click", function (even) {
+  updateBtn.on("click", function (event) {
     event.preventDefault();
     switchDisplay("updateInformation");
   });
 
-  //Update post function, somehow when you click "Save" the update will go to put route, and page reloads
-  function updatePost(Educator) {
+
+  // Update: What Educator to Update
+  function updateEducator() {
+    console.log("Save Clicked");
+    const currentEducator = $(this).data("edid");
+    updateAccount(currentEducator);
+  }
+  
+  //Update educator function after having ID, reloads page.
+  function updateAccount(id) {
+    const updateData = {
+      first_name: updateFirstNameInput.val().trim(),
+      last_name: updateLastNameInput .val().trim(),
+      bio: updateBioInput.val().trim(),
+      SpecialityId: parseInt(specialtyInputVal)
+    };
     $.ajax({
       method: "PUT",
-      url: "/api/dashboard/:id",
-      data: Educator,
+      url: "/api/dashboard/" +id,
+      data: updateData,
     }).then(function () {
       location.reload("/api/dashboard/:id").catch(handleLoginErr);
     });
@@ -41,13 +64,8 @@ $(document).ready(function () {
 // Delete: What Educator to Delete
   function deleteEducator() {
     console.log("Delete Clicked");
-    const currentEducator = $(this)
-    $(this)
-    .parent()
-    .parent()
-    .data();
-    console.log(currentEducator);
-    deleteAccount(currentEducator.id);
+    const currentEducator = $(this).data("edid");
+    deleteAccount(currentEducator);
   }
   
 
