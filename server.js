@@ -56,8 +56,8 @@ require("./routes/api-routes.js")(app);
  * APP LISTEN
  */
 db.sequelize
-  .sync({ force: true })
-  // .sync()
+  // .sync({ force: true })
+  .sync()
   .then(() => {
     // Start our server so that it can begin listening to client requests.
     app.listen(PORT, function () {
