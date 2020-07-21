@@ -9,7 +9,7 @@ By: Project Team 7<br>
 
 ### 2. User Story <br>
 
-### 3. Credit <br>
+### 3. Credits <br>
 
 ### 4. API Sources <br>
 
@@ -24,12 +24,12 @@ By: Project Team 7<br>
 ## User Story
 
 <i>
-As a person in need of relaxation,<br> 
-I want to find customized recipes and movies based on my preference,<br>
-So that I can spend quality time by myself or with loved ones rather than searching through meal and movie options.
+As a remote learner,<br> 
+I want to find an educator who specializes in my subject,<br>
+So that I can learn the information in an engaging way.
 <i>
 
-## Credit
+## Credits
 
 <i>
 "This product uses the TMDb API but is not endorsed or certified by TMDb."
