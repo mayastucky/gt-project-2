@@ -60,12 +60,13 @@
 
 <li>
     <h3>Results Will Show Below</h3>
-    <ul>
+    <ul id = "searchResults">
         {{#each educators}}
         <li>
             <p>Name: {{dataValues.first_name}} {{dataValues.last_name}}</p>
             <p>Specialty: {{dataValues.SpecialityId}}</p>
             <p>Bio: {{dataValues.bio}}</p>
+            <p><a href="https://calendly.com/yourmaestroteacher">Schedule your Educator here!</a> </p>
         </li>
         {{/each}}
     </ul>
