@@ -11,7 +11,7 @@ By: Project Team 7<br>
 
 ### 3. Credits <br>
 
-### 4. API Sources <br>
+### 4. New Technology <br>
 
 ### 5. Usage <br>
 
@@ -32,38 +32,33 @@ So that I can learn the information in an engaging way.
 ## Credits
 
 <i>
-"This product uses the TMDb API but is not endorsed or certified by TMDb."
+This was a team project completed as Project 2 for the Georgia Tech, FullStack Flex program.
 <i>
 
-## API Sources
+## New Technology
+<i>
+The application requires passport and bcrypt package in order to authenticate users.
+<i>
 
-link : https://developers.themoviedb.org/
-
-link : https://developer.edamam.com/
 
 ## Usage
 
-<i>
+[Deployed Heroku link](https://secure-shelf-55938.herokuapp.com/)
 
-link: https://chayvw.github.io/gt-gp1-dinmo/
 
-<hr>
+
 
 ## Screenshot
 
-![screenshot](./assets/images/screenshot.png)
+![screenshot](public/img/maestro-screenshot.png)
 
-<hr>
-
-<i>
-<hr>
 
 ## Licensing
 
 <i>
 MIT License
 
-Copyright (c) [2020][chay williams, phuong le, christina starr, austin keener]
+Copyright (c) [2020][Jennifer Daeumler, Kaleb Garrison,Christina Starr, Maya Stucky]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
