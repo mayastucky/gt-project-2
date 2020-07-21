@@ -75,3 +75,18 @@ h3 {
 .uk-card-title {
   font-family: "Montserrat", sans-serif;
 }
+
+#currentInformation,
+#updateInformation {
+  margin-left: 25%;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#deleteButton {
+  float: right;
+}
+
+#saveButton {
+  margin-left: 45%;
+}
