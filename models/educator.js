@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 
 module.exports = function (sequelize, DataTypes) {
-  var Educator = sequelize.define("Educator", {
+  const Educator = sequelize.define("Educator", {
     // The email cannot be null, and must be a proper email before creation
     first_name: {
       type: DataTypes.STRING,
