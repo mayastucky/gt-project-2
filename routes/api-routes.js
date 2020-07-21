@@ -34,7 +34,7 @@ module.exports = function (app) {
   app.put("/api/dashboard/:id", function (req, res) {
     db.Educator.update(req.body, {
       where: {
-        id: req.body.id,
+        id: parseInt(req.body.id),
       },
     }).then(function (dbEducator) {
       res.json(dbEducator);

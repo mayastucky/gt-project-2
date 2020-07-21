@@ -10,7 +10,7 @@ $(document).ready(function () {
   const updateBioInput = $("#updateBioInput");
   const saveBtn = $("#saveButton");
   let specialtyInputVal = '';
-  
+
   $("#specialty-input").change(function () {
     return specialtyInputVal = $("#updateSpecialtyInput option:selected").val();
 });
@@ -20,7 +20,7 @@ $(document).ready(function () {
 
   switchDisplay("currentInformation");
   //Clicking on update account from first view will give you preloaded form
-  updateBtn.on("click", function (even) {
+  updateBtn.on("click", function (event) {
     event.preventDefault();
     switchDisplay("updateInformation");
   });
@@ -34,14 +34,13 @@ $(document).ready(function () {
   }
   
   //Update educator function after having ID, reloads page.
-  function updateAccount() {
+  function updateAccount(id) {
     const updateData = {
       first_name: updateFirstNameInput.val().trim(),
       last_name: updateLastNameInput .val().trim(),
       bio: updateBioInput.val().trim(),
       SpecialityId: parseInt(specialtyInputVal)
     };
-    console.log(updateData)
     $.ajax({
       method: "PUT",
       url: "/api/dashboard/" +id,
