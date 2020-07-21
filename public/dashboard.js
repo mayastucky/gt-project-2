@@ -16,6 +16,13 @@ $(document).ready(function () {
 });
 
   $(deleteBtn).on("click", deleteEducator);
+  // $(deleteBtn).on("click", function(){
+  //   let confirm= confirm("Are you sure you want to delete your account?");
+  //   if (confirm===true){
+  //     deleteEducator();
+  //   }
+  // });
+
   $(saveBtn).on("click", updateEducator);
 
   switchDisplay("currentInformation");
@@ -35,11 +42,13 @@ $(document).ready(function () {
   
   //Update educator function after having ID, reloads page.
   function updateAccount(id) {
+    console.log(id);
     const updateData = {
+      id,
       first_name: updateFirstNameInput.val().trim(),
       last_name: updateLastNameInput .val().trim(),
       bio: updateBioInput.val().trim(),
-      SpecialityId: parseInt(specialtyInputVal)
+      // SpecialityId: parseInt(specialtyInputVal)
     };
     $.ajax({
       method: "PUT",

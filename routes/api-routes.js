@@ -32,11 +32,17 @@ module.exports = function (app) {
 
   //Update Route for Updated Member
   app.put("/api/dashboard/:id", function (req, res) {
-    db.Educator.update(req.body, {
+    console.log(req.body);
+    db.Educator.findOne({
       where: {
         id: parseInt(req.body.id),
       },
     }).then(function (dbEducator) {
+      dbEducator.update({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        bio: req.body.bio
+      })
       res.json(dbEducator);
     });
   });
@@ -60,6 +66,6 @@ module.exports = function (app) {
 
   //Get route for search page. Need to adjust where clause
   //app.post("/api/search/:SpecialityId", function (req, res) {
-    
+
   //});
 };
