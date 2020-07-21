@@ -1,8 +1,8 @@
 <nav class="uk-navbar-container uk-margin" uk-navbar id="navbar">
     <div class="uk-navbar-center">
-        {{!-- <img src="/public/img/IMG_3188.JPG"> --}}
         <a class="uk-navbar-item uk-logo" href="/"
             style="font-family: 'Delius Unicase', cursive; color:white">Maestro</a>
+        <img src="https://i.imgur.com/b4OGdPV.png" height="100" width="75">
         {{!-- <div class="uk-navbar-center-right">
             <div>
                 <ul class="uk-navbar-nav">
@@ -16,7 +16,7 @@
     </div>
 </nav>
 
-<form style="width: 50%; margin-left: 375px">
+<form id="searchForm">
     <fieldset class="uk-fieldset">
         <div class="uk-margin">
             <legend class="uk-legend">Browse by Subject</legend>
@@ -58,16 +58,23 @@
     </fieldset>
 </form>
 
-<li>
-    <h3>Results Will Show Below</h3>
-    <ul id = "searchResults">
-        {{#each educators}}
-        <li>
-            <p>Name: {{dataValues.first_name}} {{dataValues.last_name}}</p>
-            <p>Specialty: {{dataValues.SpecialityId}}</p>
+
+<h3 id="resultsBelow">Results Will Show Below</h3>
+{{#each educators}}
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid id="searchResults">
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-2/512/User_Interface-10-512.png" alt=""
+            height="100" width="100" uk-cover>
+        <canvas width="300" height="200"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{dataValues.first_name}} {{dataValues.last_name}}</h3>
+            {{!-- <p>Specialty: {{dataValues.SpecialityId}}</p> --}}
             <p>Bio: {{dataValues.bio}}</p>
+            <br>
             <p><a href="https://calendly.com/yourmaestroteacher">Schedule your Educator here!</a> </p>
-        </li>
-        {{/each}}
-    </ul>
-</li>
+        </div>
+    </div>
+</div>
+{{/each}}
