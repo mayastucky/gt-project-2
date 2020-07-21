@@ -53,7 +53,7 @@ $(document).ready(function () {
           window.location.replace("/dashboard/" + data.id);
           // If there's an error, handle it by throwing up a bootstrap alert
         })
-        .catch(handleLoginErr);
+        .catch(handleLoginErr());
     }
   
     function handleLoginErr(err) {
