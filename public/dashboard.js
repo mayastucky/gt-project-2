@@ -8,14 +8,15 @@ $(document).ready(function () {
   const updateFirstNameInput = $("#updateFirstNameInput");
   const updateLastNameInput = $("#updateLastNameInput");
   const updateBioInput = $("#updateBioInput");
-  const specialtyInputVal;
-
+  const saveBtn = $("#saveButton");
+  let specialtyInputVal = '';
+  
   $("#specialty-input").change(function () {
     return specialtyInputVal = $("#updateSpecialtyInput option:selected").val();
 });
 
   $(deleteBtn).on("click", deleteEducator);
-
+  $(saveBtn).on("click", updateEducator);
 
   switchDisplay("currentInformation");
   //Clicking on update account from first view will give you preloaded form
@@ -25,18 +26,25 @@ $(document).ready(function () {
   });
 
 
-  //Update educator function, somehow when you click "Save" the update will go to put route, and page reloads
+  // Update: What Educator to Update
   function updateEducator() {
+    console.log("Save Clicked");
+    const currentEducator = $(this).data("edid");
+    updateAccount(currentEducator);
+  }
+  
+  //Update educator function after having ID, reloads page.
+  function updateAccount() {
     const updateData = {
       first_name: updateFirstNameInput.val().trim(),
       last_name: updateLastNameInput .val().trim(),
       bio: updateBioInput.val().trim(),
       SpecialityId: parseInt(specialtyInputVal)
     };
-    console.log(udpateData)
+    console.log(updateData)
     $.ajax({
       method: "PUT",
-      url: "/api/dashboard/:id",
+      url: "/api/dashboard/" +id,
       data: updateData,
     }).then(function () {
       location.reload("/api/dashboard/:id").catch(handleLoginErr);
@@ -58,7 +66,6 @@ $(document).ready(function () {
   function deleteEducator() {
     console.log("Delete Clicked");
     const currentEducator = $(this).data("edid");
-  
     deleteAccount(currentEducator);
   }
   
