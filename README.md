@@ -19,7 +19,8 @@ By: Project Team 7<br>
 
 ## Description
 
-<i> It’s Sunday night and you’re dreading the thought of explaining fraction decimals to your 9 year old, again. If only, you could have a real teacher, do it for you. Now you can, introducing Maestro. Simply login, choose your subject and get matched with professional educators  for a live remote lesson.<i>
+<!-- <i> Elevator Pitch It’s Sunday night and you’re dreading the thought of explaining fraction decimals to your 9 year old, again. If only, you could have a real teacher, do it for you. Now you can, introducing Maestro. Choose your subject and get matched with professional educators  for a live remote lesson.<i> -->
+<i> The Web application is designed to be a meeting platform between remote learners and educators. Maestro allows learners to have the school experience remotely. It is a fully functioning CRUD application, in that an educator can create an account, login in to see their dashboard, update the information as well as delete. <i>
 
 ## User Story
 
